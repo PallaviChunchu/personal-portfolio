@@ -1,0 +1,690 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* ==========================================================================
+   2. THEME TOGGLE
+   ========================================================================== */
+#theme-toggle {
+    position: fixed;
+    top: 10px;       
+    right: 20px;     
+    z-index: 1001;   
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* To change Dark mode button colour */
+.dark-mode #theme-toggle {
+    background: transparent;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: darkorange;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: darkorange;
+}
+
+
+/* Common Section Settings */
+.about-section, .experience-section, .project-section, .footer-section {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.arrow2 {
+    transform: rotate(180deg);
+    bottom: 50px;
+}
+
+.arrow img {
+    width: 40px;
+}
+
+/* ==========================================================================
+   3. NAVIGATION
+   ========================================================================== */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 0px 100px;
+}
+
+.logo {
+    width: 40vw;
+    font-size: 2em;
+    font-weight: 600;
+    color: darkorange;
+}
+
+.menu_bar {
+    list-style: none;
+    display: flex;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+.menu_bar li {
+    font-size: 1.2em;
+}
+
+.navbar-menu {
+    display: none;
+}
+
+/* ==========================================================================
+   4. SECTION 1 (HOME)
+   ========================================================================== */
+.home-section {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    gap: 60px;
+}
+
+.home-image {
+    margin-left: 15vw;
+}
+
+.home-image img {
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: darkorange 0px 0px 0px 2px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.intro-text {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: darkorange;
+}
+
+.role-text {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btns > :nth-child(1), .btns > button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btns > :nth-child(1):hover {
+    background-color: black;
+    color: white;
+}
+
+.btns > :nth-child(2) {
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btns > :nth-child(2):hover {
+    background-color: darkorange;
+    color: white;
+    border-color: darkorange;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+ .social i {
+    font-size: 45px; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding-left: 15px; 
+}
+
+.social i:hover {
+    color: darkorange;
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   5. SECTION 2 (ABOUT)
+   ========================================================================== */
+.about-section {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-header > :nth-child(1) {
+    font-weight: 600;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 150px;
+    gap: 60px;
+}
+
+.about-image {
+    margin-left: 150px;    
+    
+}
+
+.about-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: darkorange 0px 0px 0px 2px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-cards {
+    display: flex;
+    gap: 50px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(163, 163, 163);
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 5px;
+}
+
+ .box i {
+    font-size: 35px;
+    color: black;
+}
+
+.box > :nth-child(2) {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box > :nth-child(3), .box > :nth-child(4) {
+    font-weight: 600;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.p1 {
+    width: 80%;
+}
+
+/* ==========================================================================
+   6. SECTION 3 (EXPERIENCE)
+   ========================================================================== */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh; /*80vh*/
+    padding-top: 150px; /*100*/
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.experience-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    color: rgb(85, 85, 85);
+
+}
+.experience-container {
+    display: flex;
+    gap: 50px;
+}
+
+.box2 {
+    width: 500px;
+    border: 2px solid rgb(163, 163, 163);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 35px;
+    gap: 15px;
+}
+
+.box2 > :nth-child(1) {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+}
+
+.skills-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+ .skills-item i {
+    font-size: 25px;
+    color: black;
+}
+
+.skills-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-text > :nth-child(1) {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   7. SECTION 4 (PROJECTS)
+   ========================================================================== */
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    gap: 50px;
+    padding-top: 50px;
+    
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-header > :nth-child(1) {
+    font-weight: 600;
+}
+
+.project-container {
+    display: flex;
+    gap: 50px;
+}
+
+.box3 {
+    width: 350px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 15px;
+    border-color: rgb(163, 163, 163);
+}
+
+.box3 img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box3-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.box3-2 > :nth-child(1) {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   8. SECTION 5 (CONTACT)
+   ========================================================================== */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 80px;
+    padding-top: 130px;
+    height: 80vh;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-header > :nth-child(1) {
+    font-weight: 600;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    border: 2px solid black;
+    padding: 25px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+.a1, .a2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Contact Icons Style */
+.contact-container a i {
+    font-size: 30px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for icons and text in Contact Section */
+.contact-container a:hover i, 
+.contact-container a:hover span {
+    color: darkorange;
+}
+
+.a1 span, .a2 span {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   9. SECTION 6 (FOOTER)
+   ========================================================================== */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.footer-section > :nth-child(2) {
+    margin: 30px 0px 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (RESPONSIVENESS)
+   ========================================================================== */
+
+/* --- Desktop Animations --- */
+@media (min-width: 1025px) {
+    @keyframes appear {
+        from { opacity: 0; transform: translateX(-200px); }
+        to { opacity: 1; transform: translateX(0px); }
+    }
+    .home-section, .about-section, .experience-section, .project-section, .contact-section {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+}
+
+/* --- Tablets & Smaller Desktops (Max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    /* Layout Overrides */
+    .arrow, .navbar { display: none; }
+    .navbar-menu { display: flex; }
+
+    /* Nav Menu */
+    .hamburger {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: fixed;
+        right: 30px;
+        top: 20px;
+        z-index: 100;
+    }
+    .hamburger i { font-size: 2.2em; padding: 4px; }
+    .navbar-menu .logo { margin-top: 20px; padding-left: 30px; }
+    .navbar-menu .menu_bar {
+        display: flex;
+        flex-direction: column;
+        background-color: darkorange;
+        position: fixed;
+        right: 0;
+        top: 70px;
+        padding: 10px;
+        gap: 10px;
+        margin-right: -700px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        z-index: 100;
+        width: auto;
+    }
+    .navbar-menu .menu_bar.show { margin-right: 0px; }
+    .navbar-menu .menu_bar li a {
+        display: block;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    @media (max-width: 1024px) {
+    #theme-toggle {
+        right: 85px !important; 
+        top: 15px !important;
+        position: fixed !important;
+    }
+   }
+
+    /* Section 1 */
+    .home-section { flex-direction: column; height: 100%; margin-bottom: 50px; padding-bottom: 50px; }
+    .home-image { margin-left: 0vw; }
+    .home-image img { width: 45vw; }
+    .home-content { align-items: center; padding-bottom: 50px; }
+    p { text-align: center; width: 70%; }
+
+    /* Section 2 */
+    .about-section { height: 100%; }
+    .about-container { margin-top: 50px; flex-direction: column; }
+    .about-image { margin-left: 0px; }
+    .about-content { align-items: center; }
+
+    /* Section 3 */
+    .experience-section { padding-bottom: 150px; height: 100%; }
+    .experience-container { flex-direction: column; }
+    .box2 { width: 510px; gap: 15px; } /*500*/
+    .box2 > :nth-child(1) { font-size: 28px; }
+    .skills { gap: 50px; }
+    .skills-item { gap: 15px; }
+    .skills-item i { /*width: 35px;*/ font-size: 25px; }
+    .skills-text > :nth-child(1) { font-size: 23px; }
+
+    /* Section 4 */
+    .project-section { height: 100%; }
+    .project-container { flex-direction: column; padding-bottom: 100px; }
+    .box3 { width: 500px; gap: 20px; } /* width 450px*/
+    .box3 img { width: 400px; }
+    .box3-2 > :nth-child(1) { font-size: 25px; }
+}
+
+/* --- Mobile Devices (Max-width: 767px) --- */
+@media (max-width: 767px) {
+    .logo { text-wrap: nowrap; }
+    .navbar-menu .logo { margin-top: 25px; padding-left: 10px; font-size: 25px; }
+
+    /* Section 1 Mobile */
+    h1 { font-size: 40px; }
+    .home-image{ margin-top: 50px; }
+    .home-image img { width: 60vw; }
+
+    /* Section 2 Mobile */
+    .about-container { padding-bottom: 0px; }
+    .about-image img { width: 200px; } /*250*/
+    .about-cards { flex-direction: column; }
+
+    /* Section 3 Mobile */
+    .experience-section { margin-top: 0px; }
+    .box2 { width: 340px; gap: 25px; } /*345*/
+    .box2 > :nth-child(1) { font-size: 18px; }
+    .skills { gap: 25px; }
+    .skills-text > :nth-child(1) { font-size: 18px; }
+
+    /* Section 4 Mobile  width 300 */
+    .box3 { width: 320px; gap: 15px; }  
+    .box3 img { width: 250px; }
+    .box3-2 > :nth-child(1) { font-size: 20px; }
+
+    /* Section 5 Mobile */
+    .contact-container { gap: 20px; padding: 10px;font-size: 12px; }
+
+    /* Section 6 Footer Mobile */
+    .footer-section > :nth-child(1) {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+    }
+    .footer-section > :nth-child(2) { font-size: 10px; }
+}
+
+/* ==========================================================================
+   11. DARK MODE - CLEAN FIX (Brackets & Alignment Corrected)
+   ========================================================================== */
+
+/* 1. Body Colors */
+.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+/* 2. Text & Icons Global Fix */
+.dark-mode a, 
+.dark-mode span, 
+.dark-mode p, 
+.dark-mode i,
+.dark-mode .intro-text, 
+.dark-mode .role-text {
+    color: white !important;
+}
+
+/* 3. Button & Border Fixes */
+.dark-mode .box, 
+.dark-mode .box2, 
+.dark-mode .box3, 
+.dark-mode .contact-container, 
+.dark-mode .btns button,
+.dark-mode .btns a {
+    border-color: white !important;
+    color: white !important;
+}
+
+/* 4. Orange Highlights Fix */
+.dark-mode .logo, 
+.dark-mode h1, 
+.dark-mode a:hover, 
+.dark-mode a:hover i,
+.dark-mode a:hover span {
+    color: darkorange !important;
+}
+
+/* 5. Arrow Image Invert (Correctly Closed) */
+.dark-mode .arrow img {
+    filter: invert(1);
+} 
+
+/* 6. Responsive Menu Dark Mode Fix */
+@media (max-width: 1024px) {
+    .dark-mode .hamburger {
+        background-color: #333 !important;
+        border: 1px solid white !important;
+    }
+
+    .dark-mode .hamburger i {
+        color: white !important;
+    }
+
+    .dark-mode .navbar-menu .menu_bar {
+        background-color: #222 !important;
+    }
+
+    .dark-mode .navbar-menu .menu_bar li a {
+        background-color: #333 !important;
+        color: white !important;
+    }
+
+    .dark-mode .navbar-menu .menu_bar li a:hover {
+        background-color: darkorange !important;
+    }
+}
